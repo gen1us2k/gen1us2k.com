@@ -1,0 +1,47 @@
+baseurl = "http://gen1us2k.github.io/"
+title = "Gen1us2k"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "My Name"
+
+disqusShortname = "gen1us2k"
+canonifyurls = true
+
+[Author]
+    name = "Gen1us2k"
+    profile = "https://google.com/+AndrewMinkinGen1us2k"
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "My headline"
+    description = "My description"
+    github = "https://github.com/Gen1us2k"
+    linkedin = "https://linkedin.com/in/andrew-minkin-700a2523/"
+    gplus = "https://google.com/+AndrewMinkinGen1us2k"
+    twitter = "https://twitter.com/Gen1us2k"
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Блог"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "/project/"
+    weight = 2
+
+[[menu.main]]
+    name = "Contact"
+    url = "/page/contact/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 4
