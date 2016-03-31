@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>domains &middot; Gen1us2k</title>
-        <meta name="description" content="">
+        <title>Как мы домены мониторили &middot; Gen1us2k</title>
+        <meta name="description" content="О технологиях, бекендах, Go и жизни">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.15" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://gen1us2k.github.iocss/normalize.css">
-        <link rel="stylesheet" href="http://gen1us2k.github.iocss/highlight.css">
-        <link rel="stylesheet" href="http://gen1us2k.github.iocss/style.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
@@ -25,10 +25,10 @@
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Gen1us2k" href="http://gen1us2k.github.io">Gen1us2k</a>
+                                <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
                             </h1>
                         
-                        <a class="button-square" href="http://gen1us2k.github.ioindex.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="http://gen1us2k.github.io/index.xml"><i class="fa fa-rss"></i></a>
                         
                             <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/Gen1us2k">
                                 <i class="fa fa-twitter"></i>
@@ -80,7 +80,7 @@
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">domains</h1>
+    <h1 class="post-title" itemprop="name headline">Как мы домены мониторили</h1>
     
     <p class="post-date">
         <span>Published <time datetime="2016-03-31" itemprop="datePublished">Thu, Mar 31, 2016</time></span>
@@ -98,15 +98,83 @@
 
     
 
-<h3 id="как-мы-домены-мониторили:ab1b71fc907eef6a6ae61cecfc19728a">Как мы домены мониторили</h3>
+<p>Всем привет! Все началось с того, что у нас в компании развелось очень много доменов которые нужно вовремя продлевать. И вот, после одного провала с продлением доменов, было принято решение начать мониторить дату истечения домена и выводить его в мониторинге Nagios.</p>
+
+<h4 id="как-мониторить:ab1b71fc907eef6a6ae61cecfc19728a">Как мониторить?</h4>
+
+<p>У нас было несколько доменов в зонах kz, ru, kg, ge, com.</p>
+
+<p>Самый простой способ узнать всю нужную информацию о домене — запустить whois. Это по идее должен знать каждый. Но как все это дело внедрить в мониторинг?</p>
+
+<h4 id="чем-мониторить:ab1b71fc907eef6a6ae61cecfc19728a">Чем мониторить?</h4>
+
+<p>Покопавшись по просторам интернета, был найден модуль <a href="https://pypi.python.org/pypi/python-whois">python-whois</a>.
+Он хорошо выполнял свою работу для доменов com, net и кучи других доменов, описанных в описании к модулю.</p>
+
+<p>Не хватало функционала для нескольких доменов в зонах kg.</p>
+
+<p>В итоге появился форк проекта <a href="https://github.com/gen1us2k/python-whois">python-whois-extended</a>, который расширяет функционал для больших TLD.</p>
+
+<p>Ок, как внедрить в нагиос?</p>
+
+<p>Все просто, пишем простой чек</p>
+
+<pre><code>#!/usr/bin/env python#
+# Usage:
+# python check_domain.py -d DOMAIN
+import whois
+from datetime import datetime
+
+from sys import exit
+from optparse import OptionParser
+
+
+def check_domain(domain):
+    q = whois.query(domain)
+    if (q.expiration_date - datetime.now()).days &lt;= 30:
+        print &quot;CRITICAL: Domain: {0} expires on {1}&quot;.format(domain, q.expiration_date)
+        exit(2)
+    print &quot;OK: Domain: {0} expires on {1}&quot;.format(domain, q.expiration_date)
+
+if __name__ == '__main__':
+    parser = OptionParser()
+    parser.add_option(&quot;-d&quot;, &quot;--domain&quot;, dest=&quot;domain&quot;, help=&quot;Domain to monitor expiry date&quot;)
+    (options, args) = parser.parse_args()
+    if not options.domain:
+        print parser.print_help()
+        exit(0)
+
+    check_domain(options.domain)
+</code></pre>
+
+<p>Что он делает? Светит красным в мониторинге за месяц до истечения домена.</p>
+
+<p>Что интересно, появился еще один мейнтейнер, который добавил поддержку для hk, cn и kr TLD.</p>
+
+<p>Текущий список поддерживаемых доменов такой:</p>
+
+<p>com, net, org, uk, pl, ru, lv, jp, co_jp, de, at, eu, biz, info, name, us, co, me, be, nz, cz, it, fr, kg, vc, fm, tv, edu, ca, cn, kr, hk</p>
+
+<p>Пул-реквесты, запросы фич привествуются!</p>
+
+<p>Надеюсь, мой опыт поможет избавиться от подобной проблемы</p>
 
 </div>
 
         <footer class="post-footer clearfix">
     
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="http://gen1us2k.github.io/tags/python/">Python</a>
+            
+                 <a href="http://gen1us2k.github.io/tags/monitoring/">Monitoring</a>
+            
+        </p>
+    
 
     <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=domains&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdomains%2f"
+        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%9a%d0%b0%d0%ba%20%d0%bc%d1%8b%20%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d1%8b%20%d0%bc%d0%be%d0%bd%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%bb%d0%b8&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdomains%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
@@ -132,7 +200,7 @@
 <script type="text/javascript">
     var disqus_shortname = 'gen1us2k';
     var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/domains\/';
-    var disqus_title = 'domains';
+    var disqus_title = 'Как мы домены мониторили';
     var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/domains\/';
 
     (function() {
@@ -155,7 +223,7 @@
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Gen1us2k" href="http://gen1us2k.github.io">Gen1us2k</a>
+                        <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -172,10 +240,10 @@
             </div>
         </footer>
 
-        <script src="http://gen1us2k.github.iojs/jquery-1.11.3.min.js"></script>
+        <script src="http://gen1us2k.github.io/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-        <script src="http://gen1us2k.github.iojs/jquery.fitvids.js"></script>
-        <script src="http://gen1us2k.github.iojs/scripts.js"></script>
+        <script src="http://gen1us2k.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://gen1us2k.github.io/js/scripts.js"></script>
     </body>
 </html>
 

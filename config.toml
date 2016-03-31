@@ -1,8 +1,8 @@
-baseurl = "http://gen1us2k.github.io"
+baseurl = "http://gen1us2k.github.io/"
 title = "Gen1us2k"
 theme = "ghostwriter"
 languageCode = "en-us"
-copyright = "My Name"
+copyright = "Gen1us2k"
 
 disqusShortname = "gen1us2k"
 canonifyurls = true
@@ -16,8 +16,8 @@ canonifyurls = true
 
 [Params]
     intro = true
-    headline = "Backend stories"
-    description = ""
+    headline = "Shit happens"
+    description = "О технологиях, бекендах, Go и жизни"
     github = "https://github.com/Gen1us2k"
     linkedin = "https://linkedin.com/in/andrew-minkin-700a2523/"
     gplus = "https://google.com/+AndrewMinkinGen1us2k"
