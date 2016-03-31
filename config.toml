@@ -16,8 +16,8 @@ canonifyurls = true
 
 [Params]
     intro = true
-    headline = "My headline"
-    description = "My description"
+    headline = "Backend stories"
+    description = ""
     github = "https://github.com/Gen1us2k"
     linkedin = "https://linkedin.com/in/andrew-minkin-700a2523/"
     gplus = "https://google.com/+AndrewMinkinGen1us2k"
