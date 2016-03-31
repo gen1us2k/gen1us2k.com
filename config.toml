@@ -1,4 +1,4 @@
-baseurl = "http://gen1us2k.github.io/"
+baseurl = "http://gen1us2k.github.io"
 title = "Gen1us2k"
 theme = "ghostwriter"
 languageCode = "en-us"
