@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>intro &middot; Gen1us2k</title>
+        <meta name="description" content="My description">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.15" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://gen1us2k.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/Gen1us2k">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/Gen1us2k">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/andrew-minkin-700a2523/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AndrewMinkinGen1us2k">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Блог" href="http://gen1us2k.github.io/">Блог</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="http://gen1us2k.github.io/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="http://gen1us2k.github.io/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="http://gen1us2k.github.io/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">intro</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-03-31" itemprop="datePublished">Thu, Mar 31, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AndrewMinkinGen1us2k" itemprop="url" rel="author">Gen1us2k</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<h1 id="используем-git-в-качестве-инструмента-для-деплоя-веб-приложения:34c4da6d4768d05e50db99357a299b5c">Используем Git в качестве инструмента для деплоя веб приложения</h1>
+
+<h3 id="что-имеем:34c4da6d4768d05e50db99357a299b5c">Что имеем</h3>
+
+<p>У нас есть веб приложение, которое мы разрабатываем. Нам нужно быстро и легко добавлять изменения на продакшн</p>
+
+<h4 id="что-предлагает-нам-git:34c4da6d4768d05e50db99357a299b5c">Что предлагает нам Git</h4>
+
+<p>post-merge — Этот хук вызывается ‘git-merge’, после того, как мы выполнили &lsquo;git-pull’ или &lsquo;git-merge’ на локальном репозитории. Хук не выполнится, если у нас будут конфликты при мердже.
+post-checkout — Этот хук вызывается &lsquo;git-checkout’, после того, как мы выполним &lsquo;git-clone’ или &lsquo;git-checkout’.</p>
+
+<h4 id="что-делаем:34c4da6d4768d05e50db99357a299b5c">Что делаем</h4>
+
+<p>Механизм деплоя будет примерно таким:
+1. Поднимаем git сервер. Переводим всю разработку на git. Протестированный код заливаем в репозиторий
+2. Пишем хуки, которые будут делать то, что нам нужно сделать после деплоя. В данном случае хук post-merge.
+3. Если хотим развернуть рабочую конфигурацию на чистом сервере, то пишем хук post-checkout</p>
+
+<h4 id="к-примеру-нам-после-деплоя-надо-почистить-какую-то-папку-и-перезагрузить-апач:34c4da6d4768d05e50db99357a299b5c">К примеру, нам после деплоя надо почистить какую-то папку и перезагрузить апач.</h4>
+
+<pre><code>#!/bin/bash /etc/init.d/apache2 stop find /path/to/folder -type f -delete /etc/init.d/apache2 start
+</code></pre>
+
+<p>Положим этот скрипт в .git/hooks/post-merge.
+Выполняем git pull и у нас выполняется этот скрипт</p>
+
+<p>Аналогично и для хука post-checkout</p>
+
+<p>Плюсы:</p>
+
+<p>Быстрая доставка изменений на продакшн.
+Автоматизация
+Централизированное хранение рабочего веб проекта</p>
+
+<p>Минусы:</p>
+
+<p>Данная схема не будет работать, если мы будем создавать новые ветки, путем git checkout -b newBranch
+Данная схема не будет работать, если мы будем вручную мерджить изменения в локальном хранилище.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=intro&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fintro%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fintro%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fintro%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gen1us2k';
+    var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/intro\/';
+    var disqus_title = 'intro';
+    var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/intro\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://gen1us2k.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://gen1us2k.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://gen1us2k.github.io/js/scripts.js"></script>
+    </body>
+</html>
+
