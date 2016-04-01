@@ -36,3 +36,5 @@ title = "С чего начать изучать Go?"
 [Concurrency is not parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso)
 
 [Anvanced Go concurrency patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)
+
+Позже обязательно к прочтению [Вендоринг для начинающих](https://gocodecloud.com/blog/2016/03/29/go-vendoring-beginner-tutorial/)
