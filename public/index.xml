@@ -7,8 +7,66 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Thu, 31 Mar 2016 19:55:34 +0600</lastBuildDate>
+    <lastBuildDate>Fri, 01 Apr 2016 21:39:43 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>С чего начать изучать Go?</title>
+      <link>http://gen1us2k.github.io/2016/04/01/golang/</link>
+      <pubDate>Fri, 01 Apr 2016 21:39:43 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/04/01/golang/</guid>
+      <description>
+
+&lt;p&gt;Привет всем!
+Так сложилось в жизни, что я уже несколько месяцев пишу на Go.
+И этот язык мне нравится. Нравится своей простотой и мощной стандартной библиотекой. Мощной, но не идеальной. Пока-что единственная задача, которую я решал не стандартной библиотекой - это генерация UUID.
+Но в интернетах много решений этой проблемы.
+На стантартной библиотеке можно делать много хороших вещей. Например сделать полноценный вебсервис, хоть и простой, но полностью на стандартной библиотеке, например &lt;a href=&#34;https://github.com/gen1us2k/slack-typeform&#34;&gt;Slack-typeform&lt;/a&gt;. Сервис, который использует TypeForm для заполнения формы, и автоматически рассылает инвайты в слак, используя API обоих сервисов.&lt;/p&gt;
+
+&lt;h3 id=&#34;с-чего-начать:27e4f973bd3581492ba026d8617cd0db&#34;&gt;С чего начать?&lt;/h3&gt;
+
+&lt;p&gt;Начать можно с хабра &lt;a href=&#34;https://habrahabr.ru/post/269355/&#34;&gt;С чего начать новичку в Go&lt;/a&gt;
+Или же можно пойти по оффициальному пути.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tour.golang.org&#34;&gt;Тур по Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Или же &lt;a href=&#34;http://www.golang-book.com&#34;&gt;Книги по Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;или &lt;a href=&#34;https://gobyexample.com&#34;&gt;Go на примерах&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;В принципе вам хватит потратить пару часов на туре по Go. Дальше можно писать код.
+Из книг рекомендую &amp;ldquo;Язык программирования Go&amp;rdquo; от Кернигана.&lt;/p&gt;
+
+&lt;p&gt;Из видео стоит посмотреть&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=jgVhBThJdXc&#34;&gt;Программирование на Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cN_DpYBzKso&#34;&gt;Concurrency is not parallelism&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=QDDwwePbDtw&#34;&gt;Anvanced Go concurrency patterns&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Тупняк - как чума 21 века</title>
+      <link>http://gen1us2k.github.io/2016/03/31/plague/</link>
+      <pubDate>Thu, 31 Mar 2016 20:10:50 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/03/31/plague/</guid>
+      <description>&lt;p&gt;Очень полезный доклад о личной эффективности. Он фишку сечет и информацию доносит очень хорошо.&lt;/p&gt;
+
+&lt;p&gt;Вам знакома ситуация, когда вы зашиваетесь? Когда куча тасков в issue трекере, когда куча не отвеченных емейлов? Тогда это видео вам будет полезно к просмотру&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/RbOkgLa1XjM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Как я проходил собеседование в Яндекс</title>
