@@ -7,8 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Fri, 01 Apr 2016 21:39:43 +0600</lastBuildDate>
+    <lastBuildDate>Sat, 09 Apr 2016 22:57:20 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>microservices</title>
+      <link>http://gen1us2k.github.io/2016/04/09/microservices/</link>
+      <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/04/09/microservices/</guid>
+      <description>&lt;p&gt;Пост, больше для того, чтобы сохранить ссылки себе.
+Много интересного материала о микросервисах.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go parth 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&#34;&gt;Building and testing microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>С чего начать изучать Go?</title>
