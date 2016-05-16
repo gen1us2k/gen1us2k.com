@@ -6,6 +6,7 @@ copyright = "Gen1us2k"
 
 disqusShortname = "gen1us2k"
 canonifyurls = true
+googleAnalytics = "UA-77806682-1"
 
 [Author]
     name = "Gen1us2k"
