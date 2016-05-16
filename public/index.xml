@@ -7,11 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Sat, 09 Apr 2016 22:57:20 +0600</lastBuildDate>
+    <lastBuildDate>Mon, 16 May 2016 16:18:21 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>microservices</title>
+      <title>Как научиться программировать?</title>
+      <link>http://gen1us2k.github.io/2016/05/16/how_to_learn_programming/</link>
+      <pubDate>Mon, 16 May 2016 16:18:21 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/05/16/how_to_learn_programming/</guid>
+      <description>
+
+&lt;p&gt;Привет всем. Учитывая то, что я хочу помогать новичкам, но новичков много и каждый раз, с каждым новым новичком приходиться писать один и тот же текст, который описывает по сути все одно и тоже, то пора вынести его в один блог-пост.&lt;/p&gt;
+
+&lt;p&gt;И так, на что же обращать внимание?&lt;/p&gt;
+
+&lt;h3 id=&#34;я-учусь-в-университете-но-знаний-мне-не-дают-знания-устарели-а-я-хочу-программировать:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Я учусь в университете, но знаний мне не дают. Знания устарели, а я хочу программировать&lt;/h3&gt;
+
+&lt;p&gt;Ну давай по порядку. Университет - это основа самообразования, особенно в нашей стране. Всегда нужно учиться. Всегда нужно делиться знаниями. Каждый день.
+Университет учит тебя философии, психологии и вообще всему тому, что потребуется тебе для общения в социуме. Плюс к этому, по профилю дает тебе базовые знания математики, логики и, может быть, алгоритмам.&lt;/p&gt;
+
+&lt;h3 id=&#34;но-алгоритмы-и-математика-не-нужны-же:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Но алгоритмы и математика не нужны же!&lt;/h3&gt;
+
+&lt;p&gt;Ну, возможно. Смотря для чего. Делать сайты по двести долларов за штуку - может быть. Вполне может быть, что у тебя автомойка и тебе все это айти - дополнительный доход в виде парочки заказов. Да и в целом, ты кодишь на пхп, и тебя все устраивает в этой жизни.
+С таким подходом - да, все правильно делаешь. Но со временем тебя IT изрыгнет. К примеру есть shopify для интернет магазинов. Вордпресс предлагает хостинг блогов, не считая чисто блоггерских платформ, типа tumblr. Потребность в  базисе, таком как математикаа и алгоритмы появляется тогда, когда ты пилишь что-то серьезнее обычных сайтиков и проектов, максимум на месяц. Когда, к примеру, тебе нужно данные проанализировать. Когда нужно запилить метод, на котором будет высокая нагрузка. Да и вообще много где.&lt;/p&gt;
+
+&lt;h3 id=&#34;ок-а-где-почитать-про-алгоритмы:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Ок, а где почитать про алгоритмы?&lt;/h3&gt;
+
+&lt;p&gt;Читать - одно. Главное - применять их. Можно прочитать всего Кнута и Кормена, и не уметь написать обычную, банальную сортировку. Главное - понимание, где и как применить. Плюс практика. Прочитал про алгоритм -&amp;gt; закодил -&amp;gt; понял, где можно применить -&amp;gt; отложил в&lt;/p&gt;
+
+&lt;h3 id=&#34;а-что-еще-изучать-стоит:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;А что еще изучать стоит?&lt;/h3&gt;
+
+&lt;p&gt;Изучать стоит ТОЛЬКО базис. Компьютерные сети, Операционные системы, устойство компьютера, алгоритмы.
+Список литературы к изучанию&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Таненбаум - Компьютерные сети. Эта книга даст понимание об устройстве компьютерных сетей, а если еще понимать, что происходит в tcpdump или в дампе вайршарка - отлично.&lt;/li&gt;
+&lt;li&gt;Donald Knuth - The art of computer programming. Тяжелая книга, но читать ее стоит. Вообще каждый должен ее не осилить.&lt;/li&gt;
+&lt;li&gt;Thomas H. Cormen - Introduction to Algorithms. Книга по алгоритмам, наверное лучшее, что есть после Кнута.&lt;/li&gt;
+&lt;li&gt;Таненбаум - Архитектура Компьютера даст понимание разницы между десктопом и сервером. А также о всех уровнях, которые могут встретится тебе в изучении.&lt;/li&gt;
+&lt;li&gt;Jon Bentley - Programming Pearls. Еще одна хорошая книга по алгоритмам.&lt;/li&gt;
+&lt;li&gt;ICND первый и второй том. Хорошая литература для подготовки к сертификации CCNA в году так 2010м. Как сейчас готовиться - не знаю. Да и CCNA я никогда не сдавал.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;но-я-же-хочу-программировать-на-language-name-зачем-мне-все-это:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Но я же хочу программировать на %LANGUAGE_NAME%, зачем мне все это?&lt;/h3&gt;
+
+&lt;p&gt;А затем, чтобы ты не был хипстером, а был со временем бородатым дядей, который знает, почему его код работает или не работает. Чтобы ты смог продиагностировать, где у тебя проблема. В коде, или в настройках какого-то сервиса на сервере под определенной ОС.&lt;/p&gt;
+
+&lt;h3 id=&#34;понял-но-как-мне-начать:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Понял, но как мне начать?&lt;/h3&gt;
+
+&lt;p&gt;Начать - легко. Главное - делать это постоянно.
+Вообще тут есть три варианта:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Херачишь фриланс, не развиваешь свой мозг, учишь фреймворки и лечишь симптомы. При этом, занимайся еще не технической деятельностью. Устройся продажником куда-нибудь. Или ПМом. Или маркетологом. Открой свой бизнес&amp;hellip; И тогда тебе конец через 1-4 года.&lt;/li&gt;
+&lt;li&gt;Уделяй в универе время математике и алгоритмам. Контрибуть в опенсорц. После выпуска пытайся трудоустроится. Занимайся построением фундамента: ОС, алгоритмы, БД, кеширование, мастабирование, сети. Стараешься тусить и общаться с людьми, которые умнее тебя. Тогда в развитии ты будешь постоянно на волне.&lt;/li&gt;
+&lt;li&gt;Забиваешь на все, идешь стажером к хорошему лиду. Продаешь себя к нему в рабство на полгода-год и еще 2-3 года работаешь с ним. Получишь реальные текущие навыки и знания.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Во втором и третьем пункте без стажировки может и не обойтись&lt;/p&gt;
+
+&lt;h3 id=&#34;ок-но-я-хочу-учиться-и-быть-стажером:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Ок, но я хочу учиться и быть стажером.&lt;/h3&gt;
+
+&lt;p&gt;Хорошо. Допустим ты нашел хорошего тимлида, который готов взять тебя стажером. Но что ты можешь предложить ему, учитывая, что ты сейчас еще личинка личинки программиста? Сейчас ты не клевый и ты ничего не умеешь и обучение тебя - это трата времени и мозговых ресурсов тимлида. Это инвестиции. А любые инвестиции должны окупаться. Поэтому нет смысла в летних стажировках, стажировках на полшишечки и прочих не фултаймовых вещах.
+По опыту скажу, что из человека с улицы, слабого джуниора можно вырастить где-то за полгода. По достижению уровня джуна, ты сможешь рассчитывать на 200-400 зеленых за свои потуги.&lt;/p&gt;
+
+&lt;h3 id=&#34;ух-много-текста-а-можно-каки-нибудь-в-кратце:78a7ca62478a48c3a0d863d7313f7372&#34;&gt;Ух, много текста. А можно каки-нибудь в кратце?&lt;/h3&gt;
+
+&lt;p&gt;Да.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Пиши код&lt;/li&gt;
+&lt;li&gt;Спи достаточно&lt;/li&gt;
+&lt;li&gt;Понимай базу&lt;/li&gt;
+&lt;li&gt;Повторяй&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;По поводу литературы выше. Ее полезно читать на всех уровнях.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Читаешь, когда ты джун&lt;/li&gt;
+&lt;li&gt;Читаешь, когда ты миддл&lt;/li&gt;
+&lt;li&gt;Читаешь, когда ты сеньер&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Если сделать так, то ты с каждым прочтением будешь все больше получать понимание материала и структурировать его.&lt;/p&gt;
+
+&lt;p&gt;Вроде все, что хотел сказать. Если есть вопросы - велкам в комментарии.&lt;/p&gt;
+
+&lt;p&gt;Удачи тебе, падаван, в твоих начинаниях!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some info about microservices  </title>
       <link>http://gen1us2k.github.io/2016/04/09/microservices/</link>
       <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
       
@@ -21,7 +110,7 @@
 
 &lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go parth 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
 
@@ -30,6 +119,22 @@
 &lt;p&gt;&lt;a href=&#34;http://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
