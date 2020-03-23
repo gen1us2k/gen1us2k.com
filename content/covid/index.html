@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/covid-charts/index.js"></script>
+  </head>
+  <style>
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    body {
+      font-family: Sans-serif;
+    }
+  </style>
+  <title>COVID-19 и рынки</title>
+  <body>
+    <div style="text-align: center;">
+    <h1> COVID-19 и рынки</h1>
+    <h3><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"> Подробнее о COVID-19 ситуации в мире</a></h3>
+    </div>
+    <div class="covid" style="display: flex; margin: auto; justify-content: space-around;  ">
+      <div id='kyrgyzstan'></div>
+      <div id='usa'></div>
+    </div>
+    <div class="market" style="text-align: center; display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 40px; max-width: 100%;">
+      <img src="https://finviz.com/fut_chart.ashx?t=YM&cot=124601,124603&p=d1&rev=637205517863580333">
+      <img src="https://finviz.com/fut_chart.ashx?t=ES&cot=138741,13874A&p=d1&rev=637205518940261061">
+      <img src="https://finviz.com/fut_chart.ashx?t=CL&cot=067651&p=d1&rev=637205519179217711">
+      <img src="https://finviz.com/fut_chart.ashx?t=QA&p=d1&rev=637205518392223860">
+    </div>
+
+    <script>
+      createChart(document.querySelector("#kyrgyzstan"), { country: "Kyrgyzstan" });
+      createChart(document.querySelector("#usa"), { country: "US" });
+    </script>
+  </body>
+
+</html>
