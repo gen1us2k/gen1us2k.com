@@ -1,0 +1,70 @@
+## Basic Configuration
+
+baseurl = "https://gen1us2k.com/"
+builddrafts = false
+canonifyurls = false
+languageCode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Andrew Minkin"
+title = "Andrew Minkin"
+
+theme = "hugo-goa"
+
+## Hugo Built-in Features
+googleAnalytics = "XYZ"
+enableRobotsTXT = true
+[markup.goldmark.renderer]
+unsafe= true
+
+## Site Settings
+[params]
+author = "Andrew Minkin"
+intro = "Software Engineer"
+description = "Investor [@Shamal](https://instagram.com/shamal.life). Music manager of [My Own Shiva](https://www.youtube.com/channel/UCNJPpeTJhsPgFi4yN9sihtQ). Adviser [@ESC](https://www.instagram.com/esckgorg/?hl=en) <br><br> The leader is truly and ultimately responsible for everything. <br>© Jocko Willink"
+authorimage = "headshot.jpg"
+dateformat = "Jan 2, 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Andrew Minkin (@gen1us2k)"
+keywords = "golang,go,gen1us2k,minkin,andrew,andrew minkin"
+
+## Social Accounts
+[params.social]
+github = "gen1us2k"
+instagram = "gen1us2k"
+linkedin = "andrew-minkin-700a2523"
+twitter = "gen1us2k"
+facebook = "Gen1us2k"
+gitlab = "gen1us2k"
+bitbucket = "gen1us2k"
+patreon = "gen1us2k"
+youtube = "AndrewMinkinGen1us2k"
+twitch = "gen1us2k"
+strava = "gen1us2k"
+telegram = "gen1us2k"
+
+## Extras
+[params.extra]
+copyright = "© 2021. Andrew Minkin 53 75 62 73 63 72 69 62 65 20 74 6f 20 6d 79 20 63 68 61 6e 6e 65 6c 2e 20 46 6f 6c 6c 6f 77 20 6d 65 20 6f 6e 20 49 6e 73 74 61 67 72 61 6d 20"
+poweredby = false
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = false
+
+## Main Menu
+[[menu.main]]
+    name = "blog"
+    weight = 100
+    identifier = "blog"
+    url = "https://t.me/retired_on_fire"
+[[menu.main]]
+    name = "Hire me!"
+    identifier = "about"
+    weight = 200
+    url = "https://drive.google.com/file/d/1cjRAGSYmJ0uc8OXcAgtyBvqVmmrdnUle/view?usp=sharing"
