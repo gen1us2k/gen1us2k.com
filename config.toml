@@ -23,8 +23,8 @@ unsafe= true
 ## Site Settings
 [params]
 author = "Andrew Minkin"
-intro = "Software Engineer"
-description = "Investor [@Shamal](https://instagram.com/shamal.life). Music manager of [My Own Shiva](https://www.youtube.com/channel/UCNJPpeTJhsPgFi4yN9sihtQ). Adviser [@ESC](https://www.instagram.com/esckgorg/?hl=en) <br><br> The leader is truly and ultimately responsible for everything. <br>© Jocko Willink"
+intro = "Software Engineer with 16+ years of experience"
+description = "Investor [@Shamal](https://instagram.com/shamal.life). Adviser [@ESC](https://www.instagram.com/esckgorg/?hl=en) <br><br> The leader is truly and ultimately responsible for everything. <br>© Jocko Willink"
 authorimage = "headshot.jpg"
 dateformat = "Jan 2, 2006"
 
